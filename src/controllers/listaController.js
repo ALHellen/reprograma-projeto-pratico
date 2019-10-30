@@ -9,7 +9,12 @@ exports.get = (req, res) => {
 
 exports.getById = (req, res) => {
     const id = req.params.id
-    const lista = listas.find(lista => lista.id = id)
-    delete lista.id
-    res.status(200).send(lista)
+    const list = listas.find(list => list.id == id)
+    // delete lista.id
+    console.log(id,"SEI LA")
+    res.status(200).send(list)
 }
+
+
+
+
