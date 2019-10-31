@@ -32,4 +32,8 @@ exports.getByColab = (req, res) => {
     res.status(200).send(concluido)
     }
 
-
+    exports.getData = (req,res) => {         
+        let concluido = listas.sort((a,b) => { return a.dataConclusao > b.dataConclusao})
+        console.log(concluido,"SEI LA")
+       res.status(200).send(concluido)
+     }
