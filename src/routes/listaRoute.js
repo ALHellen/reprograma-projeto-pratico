@@ -5,7 +5,7 @@ const controller = require("../controllers/listaController")
 //ROTAS TAMBÉM SÃO LIDAS EM SEQUENCIA --- WARNING
 
 router.get("/", controller.get)
-router.get("/:colaborador", controller.getByColab)
+router.get("/:colaboradora", controller.getByColab)
 router.get("/:concluido", controller.getByConcluido)
 router.get("/:id", controller.getById)
 

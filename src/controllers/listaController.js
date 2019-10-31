@@ -26,9 +26,10 @@ exports.getByConcluido = (req, res) => {
 
 exports.getByColab = (req, res) => { 
     const colab = req.params.colaboradora
-    const  lista = listas.find(list => list.colab == colab)
-    // delete lista.id
-    console.log(colab,"SEI LA")
-    res.status(200).send(lista)
-}
+    let concluido = listas.filter((busca) => { return busca.colaboradora == colab })
+
+    console.log(concluido,"SEI LA")
+    res.status(200).send(concluido)
+    }
+
 
